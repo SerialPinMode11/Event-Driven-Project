@@ -1,0 +1,187 @@
+body {
+    background-color: #073a4b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 18px; /* Increased font size */
+}
+
+header, footer {
+    background-color: #108ab1;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Center the form and set background for Event Configuration */
+#event-config {
+    background-color: #108ab1; /* Match header and footer color */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: none; /* Remove the max-width constraint */
+    margin: 0 auto;
+}
+
+/* Center the form within its container */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Style inputs with an oval shape */
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 25px; /* Makes the input oval */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 25px; /* Matches input shape */
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#seat-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
+    background-color: #213a58;
+    color: #213a58;
+    padding: 1rem;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: move;
+    user-select: none;
+    
+}
+
+.seat.available {
+    background-color: #90EE90;
+}
+
+.seat.reserved {
+    background-color: #FF6347;
+    cursor: not-allowed;
+}
+
+#qr-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* bath 2 */
+
+.side-table {
+    float: left;
+    width: 30%;
+    background-color: #108ab1; /* Matches banner color */
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-right: 2rem;
+    overflow-y: auto;
+    height: calc(100vh - 4rem); /* Keeps it responsive */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.side-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.side-table th, .side-table td {
+    border: 1px solid #fff;
+    padding: 8px;
+}
+
+.side-table th {
+    background-color: #065c78;
+}
+
+.side-table td button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.side-table td button:hover {
+    background-color: #ff8567;
+}
+
+.layout-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.side-table {
+    flex: 0 0 30rem; /* 30% of the screen width */
+    background-color: #108ab1;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-y: auto;
+    height: calc(100vh - 4rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+    flex: 1;
+}
+
+
+.logout-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-btn:hover {
+    background-color: #ff8567;
+}
+

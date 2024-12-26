@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Seat Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex">
+    <header>
+        <h1>Event Seat Manual Reservation System</h1>
+    </header>
+    <main>
+        <div class="layout-container">
+            <div class="side-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Reservee Name</th>
+                            <th>Seat Number</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reservation-details">
+                        <!-- Rows dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="main-content">
+                <section id="event-config">
+                    <h2>Event Configuration</h2>
+                    <form id="event-form">
+                        <label for="event-name">Event Name:</label>
+                        <input type="text" id="event-name" required>
+                        <label for="total-seats">Total Seats:</label>
+                        <input type="number" id="total-seats" min="1" required>
+                        <label for="rows">Number of Rows:</label>
+                        <input type="number" id="rows" min="1" required>
+                        <label for="columns">Number of Columns:</label>
+                        <input type="number" id="columns" min="1" required>
+                        <button type="submit">Generate Seating Plan</button>
+                    </form>
+                </section>
+                <section id="seating-plan">
+                    <h2>Seating Plan</h2>
+                    <div id="seat-container"></div>
+                </section>
+                <section id="reservation-form" style="display: none;">
+                    <h2>Reserve a Seat</h2>
+                    <form id="reserve-form">
+                        <label for="customer-name">Name:</label>
+                        <input type="text" id="customer-name" required>
+                        <label for="customer-email">Email:</label>
+                        <input type="email" id="customer-email" required>
+                        <label for="seat-number">Seat Number:</label>
+                        <input type="text" id="seat-number" readonly>
+                        <button type="submit">Reserve Seat</button>
+                    </form>
+                </section>
+                <section id="qr-code">
+                    <h2>Your Ticket</h2>
+                    <div id="qr-container"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <button id="logout-btn" class="logout-btn">Log Out</button>
+    <a class="back-btn" href="../index_request.php" style="background-color: #108ab1;"> Back</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <footer style="color: #213a58;">
+        <p>&copy; 2024 Event-Holder QR-based Seat Reservation System</p>
+    </footer>
+</body>
+</html>
+
